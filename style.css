@@ -1,0 +1,351 @@
+* {
+  color: white;
+}
+
+html {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url(./font/coolvetica/Coolvetica\ Rg.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "chakra petch";
+  src: url(./font/chakra_petch/ChakraPetch-Medium.ttf) format("truetype");
+}
+
+body {
+  background-color: #000;
+  padding: 0 5%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.liste_hamb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+}
+
+/* enleve les points des listes */
+li {
+  list-style: none;
+}
+
+a {
+  font-family: "chakra petch";
+  font-size: 2.5vw;
+}
+
+
+
+.projet {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.description {
+  color: #fff;
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+  height: 100vh;
+  width: 100%;
+  max-width: 600px;
+  position: fixed;
+  top: 0;
+  right: -600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.3s ease;
+  background-color: #000;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+/* nav */
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: black;
+}
+
+/* ham menu */
+.ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  display: none;
+}
+
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span {
+  background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* nom titre accueil */
+.name {
+  font-family: coolvetica;
+  font-weight: 50;
+  font-size: 10vw;
+  margin-top: 5%;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+/* liens page d'acceuil */
+.fields {
+  display: flex;
+  font-size: 2.5vw;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 600px;
+  width: 100%;
+  align-self: flex-start;
+}
+
+/* nom du projet */
+.projTitre {
+  font-family: chakra petch;
+  font-size: 8vw;
+  align-self: flex-start;
+  margin: 0;
+}
+
+.fieldLi {
+  text-decoration: none;
+  font-family: "chakra petch";
+  font-size: 2.5vw;
+}
+
+.colonnes {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.imgProjet {
+  margin: 0;
+
+}
+
+.email {
+  font-family: "chakra petch";
+  font-size: 2.5vw;
+}
+
+/* colonnes projets */
+.projcol1 {
+  margin: 0;
+  padding: 0%;
+}
+
+.projcol2 {
+  margin: 0;
+  padding: 0%;
+}
+
+.projcol3 {
+  margin-top: 0vh;
+  padding: 0%;
+}
+
+/* paragraphe de description */
+.description {
+  font-family: chakra petch;
+  font-size: 4vw;
+}
+
+/* bas de page */
+footer {
+  display: flex;
+  border-top: solid;
+  flex-direction: column;
+  height: 10vh;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15%;
+}
+
+/* elements textuels de bas de page */
+.footerStuff {
+  padding: 0;
+}
+
+/* logo mrf en bas de page */
+.logo {
+  display: flex;
+  font-family: coolvetica;
+  font-weight: 50;
+  font-size: 10vw;
+  margin: 0 5%;
+}
+
+/* images projets */
+img {
+  width: 70vw;
+  aspect-ratio: 1 1;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.videoPlayer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40vw;
+
+}
+
+
+
+/* AFFICHAGE POUR DESKTOP */
+@media screen and (min-width: 600px) {
+  .off-screen-menu {
+    display: none;
+  }
+
+  .ham-menu {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .name {
+    font-size: 5vw;
+    margin-bottom: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  .fieldLi {
+    font-size: 1.5vw;
+    font-family: chakra petch;
+  }
+
+  .projcol1 {
+    display: flex;
+    flex-direction: column;
+
+    width: 45%;
+  }
+
+  .projcol2 {
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+  }
+
+  .projcol3 {
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+    margin-top: 10vh;
+  }
+
+  .projet {
+    width: 100%;
+  }
+
+  .carteProjet {
+    width: 100%;
+  }
+
+  .imgProjet {
+    width: 100%;
+    margin: 5vh 0;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  .colonnes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  a {
+    font-family: "chakra petch";
+    font-size: 2.5vw;
+  }
+
+  /* style de pages de projet */
+  .description {
+    font-size: 2vw;
+  }
+
+  .projTitre {
+    font-size: 6vw;
+  }
+
+  .videoPlayer {
+    display: flex;
+    width: 100%;
+    height: 40vw;
+  }
+
+  iframe {
+    scale: 1 1;
+    width: 100%;
+    height: 100%;
+  }
+}
