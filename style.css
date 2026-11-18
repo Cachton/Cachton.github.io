@@ -40,8 +40,6 @@ a {
   font-size: 2.5vw;
 }
 
-
-
 .projet {
   display: flex;
   justify-content: center;
@@ -132,8 +130,10 @@ nav {
 .name {
   font-family: coolvetica;
   font-weight: 50;
-  font-size: 10vw;
+  font-size: 12vw;
   margin-top: 5%;
+  line-height: 0.75;
+  letter-spacing: 0;
   align-self: flex-start;
   text-decoration: none;
 }
@@ -142,7 +142,9 @@ nav {
 .fields {
   display: flex;
   font-size: 2.5vw;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: nowrap;
   padding: 0;
   max-width: 600px;
   width: 100%;
@@ -161,6 +163,7 @@ nav {
   text-decoration: none;
   font-family: "chakra petch";
   font-size: 2.5vw;
+  white-space: nowrap;
 }
 
 .colonnes {
@@ -266,8 +269,9 @@ img {
   }
 
   .name {
-    font-size: 5vw;
+    font-size: 8vw;
     margin-bottom: 0;
+    line-height: 0.75;
   }
 
   li {
@@ -280,7 +284,7 @@ img {
     font-family: chakra petch;
   }
 
-  
+
 
   .projcol1 {
     display: flex;
@@ -351,10 +355,3 @@ img {
     height: 100%;
   }
 }
-
-@media screen and (min-width: 1200px) 
-
-  .fieldLi {
-    font-size: 36px;
-    font-family: chakra petch;
-  }
