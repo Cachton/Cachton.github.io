@@ -46,6 +46,70 @@ a {
   margin-bottom: 5px;
 }
 
+.projet>a {
+  position: relative;
+  display: block;
+  width: fit-content;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.projet>a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  height: 20%;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.02) 12%,
+      rgba(0, 0, 0, 0.08) 30%,
+      rgba(0, 0, 0, 0.22) 52%,
+      rgba(0, 0, 0, 0.55) 78%,
+      #000 100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.projetTitre,
+.projetType {
+  position: absolute;
+  z-index: 1;
+  bottom: 1rem;
+  color: #fff;
+  font-family: "chakra petch";
+  font-size: 3.33vw;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.projetTitre {
+  left: 1rem;
+}
+
+.projetType {
+  right: 1rem;
+  text-align: right;
+}
+
+.projet>a:hover::after,
+.projet>a:focus-visible::after {
+  opacity: 1;
+}
+
+.projet>a:hover .projetTitre,
+.projet>a:hover .projetType,
+.projet>a:focus-visible .projetTitre,
+.projet>a:focus-visible .projetType {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .description {
   color: #fff;
 }
@@ -308,6 +372,20 @@ img {
 
   .projet {
     width: 100%;
+  }
+
+  .projet>a {
+    width: 100%;
+  }
+
+  .projet>a::after {
+    bottom: 5vh;
+  }
+
+  .projetTitre,
+  .projetType {
+    bottom: calc(5vh + 1rem);
+    font-size: 2vw;
   }
 
   .carteProjet {
