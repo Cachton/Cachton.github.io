@@ -45,12 +45,14 @@ const translations = {
             categories: ["Graphic Design", "3D Modeling", "Video Production"],
             projectTypes: ["Video", "Design", "Design", "Design", "3D", "Video", "Design", "Design"],
             about: "About >>",
+            back: "<<Back",
             menu: ["home", "contact", "contact"]
           },
           fr: {
             categories: ["Design graphique", "Modélisation 3D", "Production vidéo"],
             projectTypes: ["Vidéo", "Design", "Design", "Design", "3D", "Vidéo", "Design", "Design"],
             about: "À propos >>",
+            back: "<<Retour",
             menu: ["accueil", "contact", "contact"]
           }
         };
@@ -168,6 +170,10 @@ const translations = {
 
           document.querySelectorAll(".aboutLink, .aboutFooterLink").forEach((element) => {
             element.textContent = text.about;
+          });
+
+          document.querySelectorAll(".backLinkText").forEach((element) => {
+            element.textContent = text.back;
           });
 
           document.querySelectorAll(".off-screen-menu a").forEach((element, index) => {

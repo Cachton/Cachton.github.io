@@ -208,6 +208,19 @@ nav {
   text-decoration: none;
 }
 
+.backLink {
+  align-self: flex-start;
+  margin: 5vh 0 0;
+  font-family: "chakra petch";
+  font-size: 3.7vw;
+  line-height: 1;
+}
+
+.backLinkText {
+  text-decoration: underline;
+  font-size: inherit;
+}
+
 /* liens page d'acceuil */
 .fields {
   display: flex;
@@ -229,6 +242,10 @@ nav {
   margin: 0;
 }
 
+.projectPage .projTitre {
+  margin-top: 4vh;
+}
+
 .fieldLi {
   text-decoration: none;
   font-family: "chakra petch";
@@ -242,6 +259,11 @@ nav {
 
 .fields>li:last-child {
   margin-left: auto;
+}
+
+.fields>li.fieldLi:nth-child(-n+2)::after {
+  content: " |";
+  margin-left: 0.7rem;
 }
 
 .colonnes {
@@ -387,8 +409,21 @@ img {
 }
 
 @media screen and (max-width: 599px) {
+  .projet>a,
+  .projet>a .imgProjet {
+    width: 80vw;
+  }
+
   .fields {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0.1rem;
+  }
+
+  .fields>li.fieldLi::after {
+    content: none;
+    display: none;
   }
 
   .fields>li:last-child {
@@ -423,6 +458,11 @@ img {
     font-size: 8vw;
     margin-bottom: 4vh;
     line-height: 0.75;
+  }
+
+  .backLink {
+    margin: 5vh 0 0;
+    font-size: 1.5vw;
   }
 
   li {
@@ -504,6 +544,8 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
   }
 
   a {
@@ -512,7 +554,22 @@ img {
   }
 
   /* style de pages de projet */
-  .description {
+  .projectPage .projTitre,
+  .projectPage .description {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projectPage .projTitre {
+    margin-top: 4vh;
+  }
+
+  .projectPage .description {
+    font-size: 2vw;
+  }
+
+  .aboutPage .description {
     font-size: 2vw;
   }
 
